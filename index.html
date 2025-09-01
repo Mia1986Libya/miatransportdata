@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Transport Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Mia Transport Management System</h1>
+
+    <!-- Manage Drivers & Destinations -->
+    <div class="manage-lists">
+      <h2>Manage Drivers & Destinations</h2>
+
+      <div class="manage-item">
+        <input type="text" id="newDriver" placeholder="Add/Edit Driver">
+        <button id="addDriverBtn">Add</button>
+        <button id="editDriverBtn">Edit</button>
+        <button id="deleteDriverBtn">Delete</button>
+        <select id="driversSelect" size="3"></select>
+      </div>
+
+      <div class="manage-item">
+        <input type="text" id="newDestination" placeholder="Add/Edit Destination">
+        <button id="addDestinationBtn">Add</button>
+        <button id="editDestinationBtn">Edit</button>
+        <button id="deleteDestinationBtn">Delete</button>
+        <select id="destinationsSelect" size="3"></select>
+      </div>
+    </div>
+
+    <!-- Trip Form -->
+    <form id="tripForm">
+      <select id="driver" required>
+        <option value="">Select Driver</option>
+      </select>
+      <input type="date" id="date" required>
+      <select id="destination" required>
+        <option value="">Select Destination</option>
+      </select>
+      <input type="text" id="shipment" placeholder="Shipment Type" required>
+      <input type="number" id="price" placeholder="Price (LYD)" required>
+      <button type="submit" id="submitBtn">Add Trip</button>
+      <button type="button" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
+    </form>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="dateAsc">Date ↑</option>
+        <option value="dateDesc">Date ↓</option>
+        <option value="priceAsc">Price ↑</option>
+        <option value="priceDesc">Price ↓</option>
+      </select>
+      <button id="exportPDFBtn">Export All as PDF</button>
+      <select id="driverFilter">
+        <option value="">Select Driver for PDF</option>
+      </select>
+      <button id="exportDriverPDFBtn">Export Driver PDF</button>
+    </div>
+
+    <!-- Trip Table -->
+    <table id="tripTable">
+      <thead>
+        <tr>
+          <th>Driver</th>
+          <th>Date</th>
+          <th>Destination</th>
+          <th>Shipment</th>
+          <th>Price (LYD)</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"><b>Total Price:</b></td>
+          <td colspan="3" id="totalPrice">0 LYD</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Chart -->
+    <h2 style="text-align:center; margin-top:40px;">Driver Revenue </h2>
+    <canvas id="revenueChart" height="200"></canvas>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

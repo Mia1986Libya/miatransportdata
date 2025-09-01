@@ -1,0 +1,155 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f7;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.manage-lists {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.manage-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.manage-item input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.manage-item button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #3498db;
+  color: white;
+}
+.manage-item button:hover {
+  background: #2980b9;
+}
+.manage-item select {
+  flex: 1;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+form input,
+form select,
+form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+form button:hover {
+  background: #2980b9;
+}
+#cancelEditBtn {
+  background: #e67e22;
+}
+#cancelEditBtn:hover {
+  background: #d35400;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.controls input,
+.controls select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+  margin: 5px;
+}
+.controls button {
+  background: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.controls button:hover {
+  background: #8e44ad;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+thead {
+  background: #3498db;
+  color: white;
+}
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+tfoot {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+.delete-btn {
+  background: #e74c3c;
+}
+.edit-btn {
+  background: #f1c40f;
+  color: black;
+  margin-right: 5px;
+}
+.invoice-btn {
+  background: #2ecc71;
+  margin-left: 5px;
+}
+
+canvas {
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 10px;
+}
